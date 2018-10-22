@@ -127,3 +127,8 @@ STATIC_URL = '/static/'
 
 MEDIA_ROUTE = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
